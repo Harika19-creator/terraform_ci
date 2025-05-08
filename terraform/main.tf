@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-1"
 }
 
 resource "aws_instance" "frontend" {
-  ami           = "ami-0f88e80871fd81e91"
+  ami           = "ami-06fe18c7144382cfb"
   instance_type = "t2.micro"
-  key_name      = "ks8"
+  key_name      = "k8s"
 
   tags = {
     Name = "c8.local"
@@ -17,9 +17,9 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_instance" "backend" {
-  ami           = "ami-0f9de6e2d2f067fca"
+  ami           = "ami-04f7a54071e74f488"
   instance_type = "t2.micro"
-  key_name      = "ks8"
+  key_name      = "k8s"
 
   tags = {
     Name = "u21.local"
